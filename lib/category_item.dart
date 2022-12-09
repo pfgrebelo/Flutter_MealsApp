@@ -12,9 +12,8 @@ class CategoryItem extends StatelessWidget {
 
   void selectCategory(BuildContext context) {
     //FUNCTION FOR THE ON TAP ACTION, TO OPEN THE SELECTED CATEGORY
-    Navigator.of(context).pushNamed(
-      '/category-meals', arguments: {'id' : id, 'title' : title}
-    );
+    Navigator.of(context).pushNamed(CategoryMealsScreen.routeName,
+        arguments: {'id': id, 'title': title});
   }
 
   @override

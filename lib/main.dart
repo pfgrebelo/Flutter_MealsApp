@@ -24,13 +24,17 @@ class MealsApp extends StatelessWidget {
               bodySmall: const TextStyle(
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
-              titleMedium:
-                  const TextStyle(fontSize: 20, fontFamily: 'RobotoCondensed', fontWeight: FontWeight.bold),
+              titleMedium: const TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'RobotoCondensed',
+                  fontWeight: FontWeight.bold),
             ),
       ),
-      home: CategoriesScreen(),
+      //home: CategoriesScreen(),
+      initialRoute: '/', //DEFAULT IS '/'
       routes: {
-        '/category-meals': (context) => CategoryMealsScreen()
+        '/': (context) => CategoriesScreen(),
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
       },
     );
   }
