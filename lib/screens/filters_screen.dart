@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../widgets/main_drawer.dart';
 
 class FiltersScreen extends StatefulWidget {
-  
   static const routeName = '/filters';
 
   final Function saveFilters;
@@ -52,12 +51,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
             IconButton(
               onPressed: () {
                 final selectedFilters = {
-                  
-                    'gluten': _glutenFree,
-                    'lactose': _lactoseFree,
-                    'vegan': _vegan,
-                    'vegetarian': _vegetarian,
-                  
+                  'gluten': _glutenFree,
+                  'lactose': _lactoseFree,
+                  'vegan': _vegan,
+                  'vegetarian': _vegetarian,
                 };
                 widget.saveFilters(selectedFilters);
               },
